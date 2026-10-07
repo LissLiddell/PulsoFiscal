@@ -1,0 +1,4 @@
+.draft-label{display:block;margin-top:16px;margin-bottom:7px;color:#56607d;font-size:10px;font-weight:700}
+.draft-input{display:block;width:100%;height:37px;border:1px solid #dbd8f7;background:#fff;border-radius:6px;padding:0 10px;color:#333e61;font-size:11px;outline:0}
+.draft-input:focus{border-color:#867bea;box-shadow:0 0 0 3px #867bea22}
+.draft-note{margin:7px 0 0;color:#9b98b7;font-size:9px;line-height:1.4}

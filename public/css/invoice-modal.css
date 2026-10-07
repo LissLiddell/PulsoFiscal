@@ -1,0 +1,154 @@
+.invoice-panel { width: 100%; }
+.invoice-row { cursor: pointer; transition: background-color .15s ease; }
+.invoice-row:hover { background: #f8f7ff; }
+.invoice-row:focus-within { outline: 2px solid #8b80ef; outline-offset: -2px; }
+.invoice-panel .panel-head { padding-bottom: 22px; }
+
+body:has(.invoice-modal-backdrop) { overflow: hidden; }
+
+.invoice-modal-backdrop {
+    position: fixed;
+    z-index: 100;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 18px;
+    background: #14203b9c;
+}
+
+.invoice-modal {
+    width: min(1180px, 100%);
+    max-width: none;
+    max-height: calc(100dvh - 36px);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e1e5ef;
+    border-radius: 17px;
+    background: #fff;
+    box-shadow: 0 25px 80px #101b3d38;
+    color: #18233a;
+}
+
+.invoice-modal-shell {
+    display: flex;
+    flex-direction: column;
+    height: min(820px, calc(100dvh - 36px));
+    min-height: 0;
+}
+
+.invoice-modal-bar {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 17px 24px;
+    border-bottom: 1px solid #e9ecf3;
+    background: #fff;
+}
+
+.invoice-modal-bar span {
+    color: #8175db;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.invoice-modal-bar h2 {
+    margin: 4px 0 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 23px;
+    letter-spacing: -.4px;
+}
+
+.invoice-modal-close {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 1px solid #e5e8f0;
+    border-radius: 9px;
+    background: #f8f9fc;
+    color: #66738b;
+    font-size: 26px;
+    line-height: 1;
+}
+
+.invoice-modal-close:hover { background: #efedff; color: #6458c7; }
+.invoice-modal-close:focus-visible { outline: 3px solid #8b80ef; outline-offset: 2px; }
+
+.invoice-modal-columns {
+    flex: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.invoice-modal-detail,
+.invoice-modal-trace { min-width: 0; }
+.invoice-modal-detail { border-right: 1px solid #e9ecf3; }
+.invoice-modal-trace { min-height: 100%; background: #fafbff; padding: 6px; }
+.invoice-modal-trace .document-trace-box { margin: 17px; }
+.invoice-modal .detail-header { padding-top: 21px; }
+
+@media (max-width: 760px) {
+    .invoice-modal-backdrop { padding: 8px; }
+
+    .invoice-modal {
+        width: 100%;
+        max-height: calc(100dvh - 16px);
+        border-radius: 12px;
+    }
+
+    .invoice-modal-shell { height: calc(100dvh - 16px); }
+    .invoice-modal-bar { padding: 13px 16px; }
+    .invoice-modal-bar h2 { font-size: 20px; }
+    .invoice-modal-columns { display: block; }
+    .invoice-modal-detail { border-right: 0; border-bottom: 1px solid #e9ecf3; }
+    .invoice-modal-trace { min-height: 0; }
+    .invoice-modal-trace .document-trace-box { margin: 11px; }
+}
+
+.table-toolbar .export-button { flex: none; border: 1px solid #dcd8fa; border-radius: 7px; padding: 0 11px; background: #f6f5ff; color: #665bd1; font-size: 10px; font-weight: 750; white-space: nowrap; }
+.table-toolbar .export-button:hover { background: #eeebff; }
+.table-toolbar .export-button:disabled { opacity: .6; }
+@media (max-width: 760px) { .table-toolbar { flex-wrap: wrap; } .table-toolbar .search-box { flex: 1 0 100%; } .table-toolbar .filter-wrap { flex: 1; justify-content: space-between; } .table-toolbar .export-button { flex: 1; min-height: 38px; } }
+
+.import-file-label { position: relative; overflow: hidden; min-height: 38px; }
+.import-file-label input[type="file"] { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+.import-file-label:focus-within { outline: 3px solid #aaa2f3; outline-offset: 2px; }
+.import-trace-hint { display: block; margin-top: 4px; color: #8a94a7; font-size: 9px; }
+
+.invoice-panel .panel-head { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.import-launch-button { flex: none; display: inline-flex; align-items: center; justify-content: space-between; gap: 18px; border: 0; border-radius: 8px; padding: 12px 15px; background: #7367dc; color: #fff; font-size: 11px; font-weight: 750; }
+.import-launch-button:hover { background: #6155c9; }
+.import-launch-button:focus-visible { outline: 3px solid #aaa2f3; outline-offset: 2px; }
+.import-launch-button span { font-size: 14px; }
+
+body:has(.import-modal-backdrop) { overflow: hidden; }
+.import-modal-backdrop { position: fixed; z-index: 100; inset: 0; display: grid; place-items: center; padding: 18px; background: #14203b9c; }
+.import-modal { display: flex; flex-direction: column; width: min(960px, 100%); max-height: calc(100dvh - 36px); overflow: hidden; border: 1px solid #e1e5ef; border-radius: 17px; background: #fff; box-shadow: 0 25px 80px #101b3d38; }
+.import-modal-bar { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 18px 24px; border-bottom: 1px solid #e9ecf3; }
+.import-modal-bar span { color: #8175db; font-size: 9px; font-weight: 800; letter-spacing: 1.2px; }
+.import-modal-bar h2 { margin: 4px 0 0; font-family: Georgia, 'Times New Roman', serif; color: #18243c; font-size: 25px; letter-spacing: -.5px; }
+.import-modal-close { flex: none; display: grid; place-items: center; width: 38px; height: 38px; padding: 0; border: 1px solid #e5e8f0; border-radius: 9px; background: #f8f9fc; color: #66738b; font-size: 26px; line-height: 1; }
+.import-modal-close:hover { background: #efedff; color: #6458c7; }
+.import-modal-close:focus-visible { outline: 3px solid #8b80ef; outline-offset: 2px; }
+.import-modal-content { min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 22px 24px 24px; }
+.import-modal .import-intro p { margin: 0; }
+
+@media (max-width: 760px) {
+    .invoice-panel .panel-head { align-items: stretch; flex-direction: column; }
+    .import-launch-button { width: 100%; }
+    .import-modal-backdrop { padding: 8px; }
+    .import-modal { width: 100%; max-height: calc(100dvh - 16px); border-radius: 12px; }
+    .import-modal-bar { padding: 14px 16px; }
+    .import-modal-bar h2 { font-size: 20px; }
+    .import-modal-content { padding: 17px 16px 19px; }
+}
