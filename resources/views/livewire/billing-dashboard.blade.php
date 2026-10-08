@@ -8,16 +8,6 @@
 
             <div class="site-header-actions">
                 <span class="site-demo-label"><span class="site-demo-dot" aria-hidden="true"></span> Demo de portafolio</span>
-                <details class="site-menu">
-                    <summary class="site-menu-trigger">Explorar <span class="site-menu-chevron" aria-hidden="true">⌄</span></summary>
-                    <nav class="site-menu-panel" aria-label="Navegación principal">
-                        <span class="site-menu-heading">RECORRER LA DEMO</span>
-                        <a class="site-menu-link" href="#resumen"><span class="site-menu-index">01</span><span><strong>Resumen</strong><small>Lo emitido, cobrado y pendiente</small></span></a>
-                        <a class="site-menu-link" href="#facturas"><span class="site-menu-index">02</span><span><strong>Facturas</strong><small>Estados, clientes y saldos</small></span></a>
-                        <a class="site-menu-link" href="#importar"><span class="site-menu-index">03</span><span><strong>Importar CSV</strong><small>Probar facturas ficticias en esta sesión</small></span></a>
-                        <span class="site-menu-note">Datos ficticios · Sin validez fiscal</span>
-                    </nav>
-                </details>
             </div>
         </div>
     </header>

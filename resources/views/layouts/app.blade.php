@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="{{ asset('css/document-trace.css') }}">
     <link rel="stylesheet" href="{{ asset('css/invoice-modal.css') }}">
     <link rel="stylesheet" href="{{ asset('css/invoice-import.css') }}">
-    <script src="{{ asset('js/navigation.js') }}" defer></script>
     @livewireStyles
 </head>
 <body>
